@@ -1,0 +1,611 @@
+$color333: #333;
+$colorForHover: rgb(149, 196, 247);
+
+@mixin greetings {
+    color: #BDBDBD;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 64px;
+}
+
+@mixin button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: $color333;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 2.4px;
+    padding: 30px 50px;
+    border: none;
+    transition: transform 0.5s, background-color 0.5s;
+}
+
+@mixin wrappers_three_section {
+    transition: transform 0.5s, background-color 0.5s;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    h1 {
+        color: var(--gray-6, #F2F2F2);
+        font-family: SF Pro Display;
+        font-size: 200px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        margin: 0;
+    }
+
+    p {
+        width: 279px;
+    }
+}
+
+
+* {
+    font-family: TT Hoves Pro Trial;
+    margin: 0;
+}
+
+.content-header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s, transform 0.3s;
+
+    img:nth-child(1) {
+        width: 68px;
+        height: 47px;
+    }
+
+    img:nth-child(2) {
+        width: 75px;
+        height: 47px;
+        margin-top: -30px;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.header-links {
+    display: flex;
+    gap: 60px;
+    list-style: none;
+
+    li {
+        color: $color333;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 12px;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    li:hover {
+        transform: scale(1.1);
+    }
+
+}
+
+#section-one {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.first-block--content {
+    display: flex;
+    gap: 150px;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+        width: 770px;
+        height: 829px;
+    }
+}
+
+.greet-to--project {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-right: -50px;
+    margin-left: 50px;
+
+    div:nth-child(1) {
+        transition: background-color 0.3s, transform 0.5s;
+    }
+
+    div:nth-child(1):hover {
+        transform: scale(1.1)
+    }
+
+    div:nth-child(3) {
+        display: flex;
+        align-items: center;
+
+        h2 {
+            color: var(--gray-4, #BDBDBD);
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+
+    span:nth-child(1) {
+        color: var(--gray-4, #BDBDBD);
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 64px;
+    }
+
+    span:nth-child(2) {
+        color: $color333;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 64px;
+    }
+
+}
+
+
+.arrows-section {
+    display: flex;
+    gap: 15px;
+    margin-top: 90px;
+
+    img {
+        background-color: #F9F9F9;
+        border: 1px solid #F2F2F2;
+        padding: 5px;
+        transition: transform 0.5s, background-color 0.5s;
+    }
+
+
+    img:nth-child(1):hover {
+        transform: translateX(-7px);
+    }
+
+    img:nth-child(2):hover {
+        transform: translateX(7px);
+    }
+}
+
+.img-btn--section {
+    position: relative;
+
+    button {
+        position: absolute;
+        bottom: 4px;
+        @include button();
+        background-color: white;
+
+    }
+
+    button:hover {
+        transform: translateX(50px);
+        background-color: $colorForHover;
+    }
+
+}
+
+#section-two {
+    width: 65%;
+    margin: 10% auto;
+}
+
+.second-content--section {
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-around;
+
+    img {
+        width: 270px;
+        height: 345px;
+        flex-shrink: 0;
+        transition: transform 0.5s, background-color 0.5s;
+    }
+
+    img:hover {
+        transform: scale(1.1)
+    }
+}
+
+.second-content_block--one {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    img:nth-child(1) {
+        width: 270px;
+        height: 265px;
+        flex-shrink: 0;
+        transition: transform 0.5s, background-color 0.5s;
+
+    }
+
+    img:nth-child(2) {
+        width: 270px;
+        height: 140px;
+        flex-shrink: 0;
+        transition: transform 0.5s, background-color 0.5s;
+
+    }
+
+    img:hover {
+        transform: scale(1.1)
+    }
+}
+
+.info-about--company {
+    width: 400px;
+
+    button {
+        @include button();
+        background-color: white;
+    }
+
+    button:hover {
+        transform: translateX(50px);
+        background-color: $colorForHover;
+    }
+
+    h1 {
+        @include greetings()
+    }
+
+    p {
+        margin-top: 10px;
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 25px;
+    }
+}
+
+#section-three {
+    width: 80%;
+    margin: 10% auto;
+}
+
+.three-content--section {
+
+    h1 {
+        @include greetings()
+    }
+
+    div {
+        display: flex;
+        margin: 0 auto;
+    }
+}
+
+.first-wrapper--three__section {
+    @include wrappers_three_section()
+}
+
+.first-wrapper--three__section:hover {
+    transform: scale(1.1)
+}
+
+.second-wrapper--three__section {
+    @include wrappers_three_section()
+}
+
+.second-wrapper--three__section:hover {
+    transform: scale(1.1)
+}
+
+#section-four {
+    width: 80%;
+    margin: 10% auto;
+}
+
+.four-content--section {
+    position: relative;
+
+    h1 {
+        @include greetings()
+    }
+}
+
+.wrapper-content-images {
+    display: flex;
+    justify-content: space-around;
+
+    img {
+        transition: transform 0.5s, background-color 0.5s;
+    }
+
+    img:hover {
+        transform: scale(1.1)
+    }
+
+}
+
+.wrapper-content-images--second {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+
+    img {
+        transition: transform 0.5s, background-color 0.5s;
+    }
+
+    img:hover {
+        transform: scale(1.1)
+    }
+}
+
+
+.our-project-wrapper {
+    transition: transform 0.5s, background-color 0.5s;
+    position: relative;
+    overflow: hidden;
+
+    h2 {
+        color: #ffffff;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 64px;
+        margin-bottom: 0px;
+    }
+
+    button {
+        color: #FFF;
+        font-family: Gothic A1;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 12px;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+        background-color: none;
+        border: none;
+    }
+}
+
+
+.our-project-wrapper:hover {
+    transform: scale(1.1)
+}
+
+.our-project__image {
+    position: relative;
+    display: inline-block;
+}
+
+.our-project__image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.our-project--info {
+    left: 6%;
+    position: absolute;
+    bottom: 20%;
+
+    button {
+        transition: transform 0.5s, background-color 0.5s;
+        margin-top: 15px;
+        background-color: rgba(0, 0, 0, 0)
+    }
+
+    button:hover {
+        transform: translateX(15px);
+    }
+}
+
+.button-submit--four__content {
+    margin-top: 30px;
+    position: relative;
+    right: -965px;
+    background-color: #333;
+    @include button();
+}
+
+.button-submit--four__content:hover {
+    transform: translateX(-20px);
+    background-color: $colorForHover;
+}
+
+#section-five {
+    width: 80%;
+    margin: 10% auto;
+}
+
+.five-content--section {
+
+    div {
+        display: flex;
+        gap: 30px;
+    }
+
+    h1 {
+        @include greetings()
+    }
+}
+
+.inputs-section--five {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-message {
+    background: #F3F3F3;
+    width: 391px;
+    height: 46px;
+    flex-shrink: 0;
+    border: none;
+    outline: none;
+    height: 125px;
+}
+
+.input-comunications::placeholder {
+    font-size: 15px;
+    padding-left: 15px
+}
+
+.inputs-section--five {
+    input {
+        background: #F3F3F3;
+        width: 391px;
+        height: 46px;
+        flex-shrink: 0;
+        border: none;
+    }
+}
+
+.inputs-section--five input:focus,
+.inputs-section--five input:active {
+    outline: none;
+    border: none;
+}
+
+.warning-text {
+    color: #333;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    width: 333px;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.button-submit--five__content {
+    margin-top: 25px;
+    position: relative;
+    background-color: #333;
+    @include button();
+}
+
+.button-submit--five__content:hover {
+    transform: translateX(20px);
+    background-color: $colorForHover;
+}
+
+#footer {
+    width: 100%;
+    margin-top: 10%;
+    background: #2C2C2C;
+    padding-top: 58px;
+}
+
+.footer-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    li {
+        color: #FFF;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+}
+
+.action-list {
+    li {
+        transition: transform 0.5s, background-color 0.5s;
+    }
+
+    li:hover {
+        transform: scale(1.1)
+    }
+
+}
+
+.six-content--section {
+    justify-content: space-around;
+    display: flex;
+    padding: 15px;
+    padding-bottom: 60px;
+}
+
+.footer-info--block {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+
+    img {
+        margin-top: -40px;
+    }
+
+    p {
+        width: 240px;
+
+    }
+}
+
+.web-platforms {
+    img {
+        transition: transform 0.5s, background-color 0.5s;
+    }
+
+    img:hover {
+        transform: scale(1.1);
+    }
+}
+
+.footer-info--block-together {
+    display: flex;
+    gap: 19px;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.links-web--platforms {
+    display: flex;
+    gap: 40px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(#FFF, 0.2);
+}
+
+.license {
+    text-align: center;
+    color: rgba(200, 200, 200, 0.50);
+    font-family: Open Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 24px;
+}
